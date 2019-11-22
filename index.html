@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/png" href="assets/images/play_button.png" />
+    <title>Add your friends!</title>
+  </head>
+  <body>
+    <div id="overlay_rating" class="add_form">
+      <div class="modal-content">
+        <div class="block">
+          <label>Course ID</label>
+          <input type="text" id="course" placeholder="Course Code" />
+        </div>
+        <div class="block">
+          <label>Rating (1-5)</label>
+          <select id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Difficulty (1-5)</label>
+          <select id="difficulty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Retake</label
+          ><select id="retake">
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Textbook</label>
+          <select id="textbook">
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Attendance</label>
+          <select id="attendance" aria-placeholder="ll">
+            <option value="Mandatory">Mandatory</option>
+            <option value="Non-Mandatory">Non-Mandatory</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Grade</label>
+          <select id="grade">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="C-">C-</option>
+            <option value="D">D</option>
+            <option value="Failed">Failed</option>
+          </select>
+        </div>
+        <div class="block">
+          <label>Comment</label>
+          <input type="text" id="comment" placeholder="Give your opinion" />
+        </div>
+
+        <div class="buttons ">
+          <button id="add_rating" class="add" onclick="javascript:off_rate();">
+            Add
+          </button>
+          <button id="cancel" onclick="javascript:off_rate();" class="add">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="overlay_add" class="add_form">
+      <div class="modal-content">
+        <h1 style="color: black">New Professor</h1>
+        <div data-tip="Your professor's First Name">
+          <input type="text" id="first_name" placeholder="First Name" />
+        </div>
+        <div data-tip="Your professor's Last Name">
+          <input type="text" id="last_name" placeholder="Last Name" />
+        </div>
+        <div data-tip="Your professor's Department">
+          <input type="text" id="department" placeholder="Department" />
+        </div>
+        <div data-tip="Directory URL (optional)">
+          <input type="text" id="directory" placeholder="Directory" />
+        </div>
+
+        <div class="buttons">
+          <button id="add" class="button_form" onclick="javascript:off_add();">
+            Add
+          </button>
+          <button
+            id="cancel"
+            class="button_form"
+            onclick="javascript:off_add();"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="overlay_update" class="add_form">
+      <div class="modal-content">
+        <h1 style="color: black">Update</h1>
+        <div data-tip="Your professor's First Name">
+          <input type="text" id="f_name" placeholder="First Name" />
+        </div>
+        <div data-tip="Your professor's Last Name">
+          <input type="text" id="l_name" placeholder="Last Name" />
+        </div>
+        <div data-tip="Your professor's Department">
+          <input type="text" id="dept" placeholder="Department" />
+        </div>
+        <div data-tip="Directory URL (optional)">
+          <input type="text" id="direct" placeholder="Directory" />
+        </div>
+
+        <div class="buttons">
+          <button
+            id="update"
+            class="button_form"
+            onclick="javascript:off_update();"
+          >
+            Add
+          </button>
+          <button
+            id="cancel"
+            class="button_form"
+            onclick="javascript:off_update();"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <button onclick="javascript:on_add();" class="add">Add Professor</button>
+
+      <h1>Professors</h1>
+      <div id="professors"></div>
+      <div id="show_prof_ratings"></div>
+    </div>
+    <br />
+    <script
+      src="https://kit.fontawesome.com/0836a1672a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+  </body>
+</html>
